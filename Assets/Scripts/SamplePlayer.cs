@@ -1,3 +1,15 @@
+/******************************************************************************
+Author: Elyas Chua-Aziz
+
+Name of Class: DemoPlayer
+
+Description of Class: This class will control the movement and actions of a 
+                        player avatar based on user input.
+
+Date Created: 09/06/2021
+******************************************************************************/
+
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -88,17 +100,12 @@ public class SamplePlayer : MonoBehaviour
 
         transform.rotation = Quaternion.Euler(playerRotation);
 
-
-        /*Vector3 playerRotation = playerCamera.transform.rotation.eulerAngles;
-        playerRotation.y += Input.GetAxis("Mouse X") * rotationSpeed * Time.deltaTime;
-        playerCamera.transform.rotation = Quaternion.Euler(playerRotation);
-        */
-
-
         Vector3 cameraRotation = playerCamera.transform.rotation.eulerAngles;
         cameraRotation.x += Input.GetAxis("Mouse Y") * rotationSpeed * Time.deltaTime;
 
-        if (cameraRotation.x < 180 && cameraRotation.x > 0)
+        //adjust the rotation to prevent camera turn upside down with adjusted camerarotation
+
+        if (cameraRotation.x < 150 && cameraRotation.x > 0)
         {
             cameraRotation.x = Mathf.Clamp(cameraRotation.x, 0, 90);
         }
