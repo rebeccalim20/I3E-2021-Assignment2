@@ -1,3 +1,17 @@
+/******************************************************************************
+Author:  
+
+Name of Class: GameManager
+
+Description of Class: mainly keeps tracks of the game and for multiple scene and 
+levels stores the player and enemy infos
+
+Date Created: 9/7/2021
+******************************************************************************/
+
+
+
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

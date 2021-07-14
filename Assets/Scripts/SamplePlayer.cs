@@ -36,11 +36,16 @@ public class SamplePlayer : MonoBehaviour
     public string nextState;
 
     private Rigidbody rb;
+    [SerializeField] bool lockCursor = true;
 
     // Start is called before the first frame update
     void Start()
     {
-
+        if(lockCursor)
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = true;
+        }
         nextState = "Idle";
     }
 

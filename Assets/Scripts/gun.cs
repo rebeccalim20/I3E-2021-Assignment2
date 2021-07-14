@@ -1,3 +1,15 @@
+/******************************************************************************
+Author:
+
+Name of Class: gun
+
+Description of Class:shoots the enemy scans 
+
+Date Created: 9/7/2021
+******************************************************************************/
+
+
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
