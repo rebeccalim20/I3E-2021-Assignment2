@@ -41,6 +41,14 @@ public class SamplePlayer : MonoBehaviour
 
     public int playerhealth = 30;
 
+    //sense pickup object;
+
+    public float pickupdistance = 10f;
+    public interactable sensedobject=null;
+    public Camera fpscamera = null;
+
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -61,6 +69,47 @@ public class SamplePlayer : MonoBehaviour
         }
 
         CheckRotation();
+        
+        //world postion of where the mouse curosr is pointing at where we are looking towards to 
+        Ray ray = fpscamera.ScreenPointToRay(Input.mousePosition);
+        RaycastHit hit;
+        
+
+        if (Physics.Raycast(ray,out hit , pickupdistance))
+        {
+            //when hit something 
+
+            interactable obj = hit.collider.GetComponent<interactable>();
+            if(obj)
+            {
+                sensedobject = obj;
+            }
+            else
+            {
+                sensedobject = null;
+            }
+        }
+        else
+        {
+            //if no hit anything 
+            sensedobject = null;
+        }
+
+        if (Input.GetMouseButton(0) && sensedobject)
+        {
+
+            Debug.LogFormat("Used :{0} of type {1} amount :{2}" ,sensedobject.name,sensedobject.pickuptype,sensedobject.amount);
+            //apply amount of the amount of the part by destroy/consume the object 
+            if (sensedobject.name == "coins")
+            {
+                Debug.Log("coinsyay");
+                GameManager.coincollect += sensedobject.amount;
+
+            }
+            Destroy(sensedobject.gameObject);
+        }
+
+
 
     }
 
