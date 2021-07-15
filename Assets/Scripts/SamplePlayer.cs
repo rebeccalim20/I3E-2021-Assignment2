@@ -40,9 +40,6 @@ public class SamplePlayer : MonoBehaviour
 
     public int playerhealth = 30;
 
-    public float currenthealth;
-    public float maxhealth;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -156,8 +153,4 @@ public class SamplePlayer : MonoBehaviour
 
     }
 
-    private void OnCollisionEnter(Collision collision)
-    {
-        
-    }
 }

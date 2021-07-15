@@ -49,4 +49,12 @@ public class enemyai : MonoBehaviour
             anim.SetBool("isAttacking", true);
         }
     }
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            GameManager.playerhealth -= 10;
+            Debug.Log("hittt");
+        }
+    }
 }

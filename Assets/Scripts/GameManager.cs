@@ -18,23 +18,37 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
-    public Text Healthtxt;
+    public Text playerHealthtxt;
     public Text Cointxt;
     public Text Ammotxt;
     
     //playerhealth
-    public int playerhealth =10;
+    public static int playerhealth =100;
 
     // Start is called before the first frame update
     void Start()
     {
-        Healthtxt = GameObject.Find("Healthtxt").GetComponent<Text>();
-        Healthtxt.text = " Health:" +playerhealth;
+        playerhealth = 100;
+        playerHealthtxt = GameObject.Find("playerHealthtxt").GetComponent<Text>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        playerHealthtxt.text = " Health:" +playerhealth;
+        playerdeath();
     }
+
+    void playerdeath()
+    {
+        //set text to zero less than zero
+
+        if (playerhealth <= 0)
+        {
+            playerhealth = 0;
+            
+        }
+
+    }
+
 }

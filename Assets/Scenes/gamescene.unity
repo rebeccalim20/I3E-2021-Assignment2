@@ -12153,7 +12153,7 @@ GameObject:
   - component: {fileID: 656463500}
   - component: {fileID: 656463499}
   m_Layer: 5
-  m_Name: Healthtxt
+  m_Name: playerHealthtxt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -24073,8 +24073,6 @@ MonoBehaviour:
   nextState: 
   lockCursor: 1
   playerhealth: 30
-  currenthealth: 0
-  maxhealth: 0
 --- !u!4 &1330774115 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4000013848046870, guid: 32f01941b7ab75d4791c8d0d65d80086, type: 3}
@@ -33615,10 +33613,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e034316c2ead3b3469050335e63b0ba8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Healthtxt: {fileID: 656463499}
+  playerHealthtxt: {fileID: 656463499}
   Cointxt: {fileID: 1466188539}
   Ammotxt: {fileID: 545890139}
-  playerhealth: 10
 --- !u!4 &1920155148 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4000012234785446, guid: 28b2b68147fce3c4187add1104d6ccd8, type: 3}
@@ -38826,7 +38823,7 @@ GameObject:
   - component: {fileID: 1968284641}
   m_Layer: 0
   m_Name: Zombie1
-  m_TagString: Untagged
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
