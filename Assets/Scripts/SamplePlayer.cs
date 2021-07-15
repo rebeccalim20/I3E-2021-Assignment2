@@ -38,6 +38,11 @@ public class SamplePlayer : MonoBehaviour
     private Rigidbody rb;
     [SerializeField] bool lockCursor = true;
 
+    public int playerhealth = 30;
+
+    public float currenthealth;
+    public float maxhealth;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -149,5 +154,10 @@ public class SamplePlayer : MonoBehaviour
             return true;
         }
 
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        
     }
 }
