@@ -3,7 +3,7 @@ Author:
 
 Name of Class: Menu 
 
-Description of Class: menu script mainly load the games and menu scripts.
+Description of Class: menu script mainly load the games and menu scripts and quit game.
 
 Date Created: 9/7/2021
 ******************************************************************************/
