@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class MusicPlayer : MonoBehaviour
 {
+  //Continue playing music even after next scene//
   void Awake()
     {
         DontDestroyOnLoad(transform.gameObject);
@@ -18,6 +19,7 @@ public class MusicPlayer : MonoBehaviour
         AudioSource.Play();
     }
 
+    // Adjusting volume on the slider//
     void Update()
     {
         AudioSource.volume = musicVolume;
