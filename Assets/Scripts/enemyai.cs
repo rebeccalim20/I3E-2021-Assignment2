@@ -35,7 +35,7 @@ public class enemyai : MonoBehaviour
     {
         float distance = Vector3.Distance(transform.position, target.position);
 
-        if (distance >2)
+        if (distance >1.5)
         {
             agent.updatePosition = true;
             agent.SetDestination(target.position);

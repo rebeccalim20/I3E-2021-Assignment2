@@ -25,11 +25,13 @@ public class GameManager : MonoBehaviour
     
     //playerhealth
     public static int playerhealth =100;
+    public static float coincollect=0;
 
     // Start is called before the first frame update
     void Start()
     {
         playerhealth = 100;
+        coincollect = 0;
         playerHealthtxt = GameObject.Find("playerHealthtxt").GetComponent<Text>();
     }
 
@@ -37,6 +39,7 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         playerHealthtxt.text = " Health:" +playerhealth;
+        Cointxt.text = " Coins:" + coincollect;
         playerdeath();
     }
 
