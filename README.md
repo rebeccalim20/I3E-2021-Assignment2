@@ -12,3 +12,8 @@ Assets from Unity Asset Store:
 
 Gun Assets:
 - https://sketchfab.com/3d-models/walther-p88-gun-a76d127c7e4a4beba6a50c29f2898fb0#download
+
+Game Music:
+- Smoking Gun by Kevin MacLeod
+  Link: https://filmmusic.io/song/4378-smoking-gun
+  License: https://filmmusic.io/standard-license
