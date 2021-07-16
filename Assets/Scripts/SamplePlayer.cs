@@ -13,7 +13,6 @@ Date Created: 09/06/2021
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class SamplePlayer : MonoBehaviour
 {
@@ -48,13 +47,9 @@ public class SamplePlayer : MonoBehaviour
     public float pickupdistance = 10f;
     public interactable sensedobject = null;
     public Camera fpscamera = null;
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 98f4f714121b3d3d838896e90442c9f866657496
 
-    public GameObject m_GotHitScreen;
 
 
 
@@ -71,21 +66,6 @@ public class SamplePlayer : MonoBehaviour
         nextState = "Idle";
     }
 
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.tag == "enemy")
-        {
-            gotHurt();
-        }
-    }
-
-    void gotHurt()
-    {
-        var color = m_GotHitScreen.GetComponent<Image>().color;
-        color.a = 0.8f;
-
-        m_GotHitScreen.GetComponent<Image>().color = color;
-    }
 
     // Update is called once per frame
     void Update()
@@ -140,19 +120,6 @@ public class SamplePlayer : MonoBehaviour
             Destroy(sensedobject.gameObject);
         }
 
-<<<<<<< HEAD
-        if (m_GotHitScreen != null)
-        {
-            if (m_GotHitScreen.GetComponent<Image>().color.a > 0)
-            {
-                var color = m_GotHitScreen.GetComponent<Image>().color;
-                color.a -= 0.01f;
-                m_GotHitScreen.GetComponent<Image>().color = color;
-            }
-        }
-
-=======
->>>>>>> 98f4f714121b3d3d838896e90442c9f866657496
     }
 
     /// <summary>
