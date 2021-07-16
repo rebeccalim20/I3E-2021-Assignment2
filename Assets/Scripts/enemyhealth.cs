@@ -19,6 +19,7 @@ public class enemyhealth : MonoBehaviour
 {
     public float enemyhealthpt = 50f;
     public GameObject enemyhealthtxt;
+    
 
     private void Start()
     {
@@ -39,6 +40,7 @@ public class enemyhealth : MonoBehaviour
             die();
         }
 
+       
     }
    void die ()
     {

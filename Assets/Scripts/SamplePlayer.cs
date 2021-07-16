@@ -25,6 +25,7 @@ public class SamplePlayer : MonoBehaviour
     [SerializeField]
     public float rotationSpeed;
 
+
     /// <summary>
     /// The camera attached to the player model.
     /// Should be dragged in from Inspector.
@@ -36,7 +37,7 @@ public class SamplePlayer : MonoBehaviour
     public string nextState;
 
     private Rigidbody rb;
-    [SerializeField] 
+    [SerializeField]
     public static bool lockCursor = true;
 
     public int playerhealth = 30;
@@ -44,8 +45,17 @@ public class SamplePlayer : MonoBehaviour
     //sense pickup object;
 
     public float pickupdistance = 10f;
-    public interactable sensedobject=null;
+    public interactable sensedobject = null;
     public Camera fpscamera = null;
+    [Header("Damage Screen")]
+    public Color damageColor;
+    public Image damageImage;
+    float colorSmoothing;
+    bool isTakingDamage;
+
+
+
+
 
 
 
@@ -60,6 +70,7 @@ public class SamplePlayer : MonoBehaviour
         nextState = "Idle";
     }
 
+
     // Update is called once per frame
     void Update()
     {
@@ -69,18 +80,18 @@ public class SamplePlayer : MonoBehaviour
         }
 
         CheckRotation();
-        
+
         //world postion of where the mouse curosr is pointing at where we are looking towards to 
         Ray ray = fpscamera.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
-        
 
-        if (Physics.Raycast(ray,out hit , pickupdistance))
+
+        if (Physics.Raycast(ray, out hit, pickupdistance))
         {
             //when hit something 
 
             interactable obj = hit.collider.GetComponent<interactable>();
-            if(obj)
+            if (obj)
             {
                 sensedobject = obj;
             }
@@ -98,7 +109,7 @@ public class SamplePlayer : MonoBehaviour
         if (Input.GetMouseButton(0) && sensedobject)
         {
 
-            Debug.LogFormat("Used :{0} of type {1} amount :{2}" ,sensedobject.name,sensedobject.pickuptype,sensedobject.amount);
+            Debug.LogFormat("Used :{0} of type {1} amount :{2}", sensedobject.name, sensedobject.pickuptype, sensedobject.amount);
             //apply amount of the amount of the part by destroy/consume the object 
             if (sensedobject.name == "coins")
             {
@@ -106,14 +117,21 @@ public class SamplePlayer : MonoBehaviour
                 GameManager.coincollect += sensedobject.amount;
 
             }
-            if(sensedobject.name == "ammo")
+            if (sensedobject.name == "ammo")
             {
                 Debug.Log("amoosds");
             }
             Destroy(sensedobject.gameObject);
         }
 
+        if (isTakingDamage)
+        {
+            damageImage.color = damageColor;
+        }
+        else
+        {
 
+        }
 
     }
 
