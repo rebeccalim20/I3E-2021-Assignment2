@@ -13,6 +13,7 @@ Date Created: 09/06/2021
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SamplePlayer : MonoBehaviour
 {
@@ -49,7 +50,7 @@ public class SamplePlayer : MonoBehaviour
     public Camera fpscamera = null;
 
 
-
+    public GameObject m_GotHitScreen;
 
 
 
@@ -64,6 +65,22 @@ public class SamplePlayer : MonoBehaviour
             Cursor.visible = true;
         }
         nextState = "Idle";
+
+     }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "enemy")
+        {
+            gotHurt();
+        }
+
+        void gotHurt()
+        {
+            var color = m_GotHitScreen.GetComponent<Image>().color;
+            color.a = 0.8f;
+            m_GotHitScreen.GetComponent<Image>().color = color;
+        }
     }
 
 
