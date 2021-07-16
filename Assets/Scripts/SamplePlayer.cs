@@ -47,11 +47,7 @@ public class SamplePlayer : MonoBehaviour
     public float pickupdistance = 10f;
     public interactable sensedobject = null;
     public Camera fpscamera = null;
-    [Header("Damage Screen")]
-    public Color damageColor;
-    public Image damageImage;
-    float colorSmoothing;
-    bool isTakingDamage;
+
 
 
 
@@ -122,15 +118,6 @@ public class SamplePlayer : MonoBehaviour
                 Debug.Log("amoosds");
             }
             Destroy(sensedobject.gameObject);
-        }
-
-        if (isTakingDamage)
-        {
-            damageImage.color = damageColor;
-        }
-        else
-        {
-
         }
 
     }
