@@ -7,7 +7,7 @@ public enum Epickuptype
 
     ept_health,
     ept_ammo,
-    ept_gem,
+    ept_key,
     ept_coin
     
 }
