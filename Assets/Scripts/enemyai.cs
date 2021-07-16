@@ -39,12 +39,12 @@ public class enemyai : MonoBehaviour
         {
             agent.updatePosition = true;
             agent.SetDestination(target.position);
-            anim.SetBool("isAttacking", false);
             anim.SetBool("isWalking", true);
+            anim.SetBool("isAttacking", false);
         }
         else
         {
-            agent.updatePosition = false;
+            /*agent.updatePosition = false;*/
             anim.SetBool("isWalking",false);
             anim.SetBool("isAttacking", true);
         }
