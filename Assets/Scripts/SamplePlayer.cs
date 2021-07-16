@@ -137,6 +137,16 @@ public class SamplePlayer : MonoBehaviour
             Destroy(sensedobject.gameObject);
         }
 
+        if (m_GotHitScreen != null)
+        {
+            if (m_GotHitScreen.GetComponent<Image>().color.a > 0)
+            {
+                var color = m_GotHitScreen.GetComponent<Image>().color;
+                color.a -= 0.01f;
+                m_GotHitScreen.GetComponent<Image>().color = color;
+            }
+        }
+
     }
 
     /// <summary>
