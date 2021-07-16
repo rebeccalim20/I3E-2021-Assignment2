@@ -28,6 +28,16 @@ public class GameManager : MonoBehaviour
     public static float coincollect=0;
     public static float ammoleft = 20;
 
+    /// <summary>
+    /// Quest text ui update
+    /// </summary>
+    public Text quest1;
+    public Text quest2;
+    public Text quest3;
+    public Text quest4;
+    public Text quest5;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -42,8 +52,12 @@ public class GameManager : MonoBehaviour
     {
         playerHealthtxt.text = " Health:" +playerhealth;
         Cointxt.text = " Coins:" + coincollect;
-        Ammotxt.text = " Ammos" + ammoleft;
+        Ammotxt.text = " Ammo left :" + ammoleft;
         playerdeath();
+        if(coincollect >=50)
+        {
+            quest1.text = " Quest 1 : collect  the  coins ( complete)" ;
+        }
 
       
 

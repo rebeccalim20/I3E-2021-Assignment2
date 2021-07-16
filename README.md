@@ -10,8 +10,8 @@ Raycast shooting - https://youtu.be/THnivyG0Mvo
 Assets from Unity Asset Store:
 - https://assetstore.unity.com/packages/3d/environments/industrial/rpg-fps-game-assets-for-pc-mobile-industrial-set-v2-0-86679
 
-Gun Prefab:
-- Done by Rebecca lim
+Gun Prefab /pickups /Ui design:
+- Done by Rebecca lim and Lindsay 
 
 Game Music:
 - Smoking Gun by Kevin MacLeod

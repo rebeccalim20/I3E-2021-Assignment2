@@ -94,6 +94,23 @@ public class SamplePlayer : MonoBehaviour
         }
 
         CheckRotation();
+        detectpickupobject();
+
+
+        if (m_GotHitScreen != null)
+        {
+            if (m_GotHitScreen.GetComponent<Image>().color.a > 0)
+            {
+                var color = m_GotHitScreen.GetComponent<Image>().color;
+                color.a -= 0.01f;
+                m_GotHitScreen.GetComponent<Image>().color = color;
+            }
+        }
+
+    }
+
+    void detectpickupobject()
+    {
 
         //world postion of where the mouse curosr is pointing at where we are looking towards to 
         Ray ray = fpscamera.ScreenPointToRay(Input.mousePosition);
@@ -134,18 +151,9 @@ public class SamplePlayer : MonoBehaviour
             if (sensedobject.name == "ammo")
             {
                 Debug.Log("amoosds");
+                GameManager.ammoleft += sensedobject.amount;
             }
             Destroy(sensedobject.gameObject);
-        }
-
-        if (m_GotHitScreen != null)
-        {
-            if (m_GotHitScreen.GetComponent<Image>().color.a > 0)
-            {
-                var color = m_GotHitScreen.GetComponent<Image>().color;
-                color.a -= 0.01f;
-                m_GotHitScreen.GetComponent<Image>().color = color;
-            }
         }
 
     }

@@ -31,9 +31,15 @@ public class gun : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(GameManager.ammoleft>0)
+        {
+
         if (Input.GetButtonDown("Fire1"))
         {
+            GameManager.ammoleft -= 2;
             Shoot();
+        }
+
         }
     }
 

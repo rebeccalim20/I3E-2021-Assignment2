@@ -8,6 +8,11 @@ public class EnemySpawn : MonoBehaviour
     public Transform[] spawnPoints;
     BoxCollider trigger;
 
+
+
+    [SerializeField] float repeatRate=0.1f;
+   
+
     private void Start()
     {
         trigger = GetComponent<BoxCollider>();
@@ -17,10 +22,13 @@ public class EnemySpawn : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            SpawnEnemies();
+            InvokeRepeating("SpawnEnemies", 0.5f, repeatRate);
+            Destroy(gameObject, 11f);
             trigger.enabled = false;
         }
     }
+
+
 
     void SpawnEnemies()
     {
@@ -29,4 +37,6 @@ public class EnemySpawn : MonoBehaviour
             Instantiate(enemyToSpawn, sp.position, sp.rotation);
         }
     }
+
+    
 }
