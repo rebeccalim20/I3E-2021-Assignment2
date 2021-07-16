@@ -106,6 +106,10 @@ public class SamplePlayer : MonoBehaviour
                 GameManager.coincollect += sensedobject.amount;
 
             }
+            if(sensedobject.name == "ammo")
+            {
+                Debug.Log("amoosds");
+            }
             Destroy(sensedobject.gameObject);
         }
 
