@@ -70,6 +70,7 @@ public class SamplePlayer : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
+        Debug.Log("playerhitenemy");
         if (collision.gameObject.tag == "enemy")
         {
             gotHurt();

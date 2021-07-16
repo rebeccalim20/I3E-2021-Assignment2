@@ -28,9 +28,6 @@ public class GameManager : MonoBehaviour
     public static float coincollect=0;
     public static float ammoleft = 20;
 
-    //ui meta effect
-    public GameObject bloodsplatterui;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -45,20 +42,10 @@ public class GameManager : MonoBehaviour
     {
         playerHealthtxt.text = " Health:" +playerhealth;
         Cointxt.text = " Coins:" + coincollect;
-        Ammotxt.text = " Coins:" + ammoleft;
+        Ammotxt.text = " Ammos" + ammoleft;
         playerdeath();
 
-        if (playerhealth <=20)
-        {
-            
-            bloodsplatterui.SetActive(true);
-
-        }
-        else
-        {
-            bloodsplatterui.SetActive(false);
-
-        }
+      
 
     }
 

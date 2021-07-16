@@ -4571,7 +4571,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1914318352}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -10503,7 +10503,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1914318352}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -12309,7 +12309,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1914318352}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -20971,7 +20971,7 @@ RectTransform:
   m_LocalScale: {x: 0.2, y: 0.2, z: 1}
   m_Children: []
   m_Father: {fileID: 1914318352}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -24100,7 +24100,7 @@ MonoBehaviour:
   pickupdistance: 10
   sensedobject: {fileID: 0}
   fpscamera: {fileID: 1087267720}
-  m_GotHitScreen: {fileID: 0}
+  m_GotHitScreen: {fileID: 1534065634}
 --- !u!4 &1330774115 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4000013848046870, guid: 32f01941b7ab75d4791c8d0d65d80086, type: 3}
@@ -25690,7 +25690,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1914318352}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -26211,7 +26211,7 @@ GameObject:
   - component: {fileID: 1534065637}
   - component: {fileID: 1534065636}
   m_Layer: 5
-  m_Name: Image
+  m_Name: blooodeffectsplatter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -26229,12 +26229,12 @@ RectTransform:
   m_LocalScale: {x: 8.0139, y: 3.7695, z: 1}
   m_Children: []
   m_Father: {fileID: 1914318352}
-  m_RootOrder: 5
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: 0, y: -0.99579}
+  m_SizeDelta: {x: 100, y: 132.18}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1534065636
 MonoBehaviour:
@@ -33604,12 +33604,12 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
+  - {fileID: 1534065635}
   - {fileID: 656463498}
   - {fileID: 545890138}
   - {fileID: 1466188538}
   - {fileID: 1154406486}
   - {fileID: 203034421}
-  - {fileID: 1534065635}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -33633,7 +33633,6 @@ MonoBehaviour:
   playerHealthtxt: {fileID: 656463499}
   Cointxt: {fileID: 1466188539}
   Ammotxt: {fileID: 545890139}
-  bloodsplatterui: {fileID: 0}
 --- !u!4 &1920155148 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4000012234785446, guid: 28b2b68147fce3c4187add1104d6ccd8, type: 3}
