@@ -58,11 +58,19 @@ public class SamplePlayer : MonoBehaviour
     public GameObject loadingscreen;
 
 
+    //audio source sound effect
+    public AudioClip  coineffect;
+    public AudioClip injured;
+    public AudioClip Ammopicks;
+    public AudioClip teleportsaudio;
+    AudioSource audioSource;
+
+
 
     // Start is called before the first frame update
     void Start()
     {
-
+       
         nextState = "Idle";
 
         if (lockCursor)
@@ -70,14 +78,17 @@ public class SamplePlayer : MonoBehaviour
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = true;
         }
-        
 
-     }
+        audioSource = GetComponent<AudioSource>();
+
+
+    }
 
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "enemy")
         {
+            audioSource.PlayOneShot(injured, 0.7F);
             gotHurt();
         }
 
@@ -151,12 +162,14 @@ public class SamplePlayer : MonoBehaviour
             if (sensedobject.name == "coins")
             {
                 GameManager.coincollect += sensedobject.amount;
+                audioSource.PlayOneShot(coineffect, 0.7F);
                 Destroy(sensedobject.gameObject);
 
             }
             if (sensedobject.name == "ammopickup")
             {
-              GameManager.ammoleft += sensedobject.amount;
+                audioSource.PlayOneShot(Ammopicks, 0.7F);
+                GameManager.ammoleft += sensedobject.amount;
               Destroy(sensedobject.gameObject);
             }
             if (sensedobject.name == "key")
@@ -174,16 +187,19 @@ public class SamplePlayer : MonoBehaviour
 
             if(sensedobject.name =="teleportpad")
             {
+                audioSource.PlayOneShot(teleportsaudio, 0.7F);
                 loadingscreen.SetActive( true);
                 Invoke("teleport1", 2f);
             }
             if (sensedobject.name == "teleportpad3")
             {
+                audioSource.PlayOneShot(teleportsaudio, 0.7F);
                 loadingscreen.SetActive(true);
                 Invoke("teleport3", 2f);
             }
             if (sensedobject.name == "teleportpad4")
             {
+                audioSource.PlayOneShot(teleportsaudio, 0.7F);
                 loadingscreen.SetActive(true);
                 Invoke("teleport4", 2f);
                 

@@ -1,3 +1,16 @@
+/******************************************************************************
+Author: 
+
+Name of Class: bossenemy
+
+Description of Class: controls enemy boss  scripting
+
+Date Created: 18/07/2021
+******************************************************************************/
+
+
+
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

@@ -22,10 +22,15 @@ public class EnemySpawn : MonoBehaviour
 
 
     [SerializeField] float repeatRate;
-   
+
+    //audiosourceclips
+    public AudioClip zombiesound;
+    AudioSource audioSource;
+
 
     private void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         //trigger and get component of box collider
         trigger = GetComponent<BoxCollider>();
     }
@@ -35,6 +40,7 @@ public class EnemySpawn : MonoBehaviour
         //if collision is tag player spawn enemies 
         if (other.tag == "Player")
         {
+            audioSource.PlayOneShot(zombiesound, 0.5F);
             InvokeRepeating("SpawnEnemies", 0.5f, repeatRate);
             Destroy(gameObject, 11f);
             trigger.enabled = false;

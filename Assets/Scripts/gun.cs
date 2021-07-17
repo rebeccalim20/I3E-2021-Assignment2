@@ -20,12 +20,14 @@ public class gun : MonoBehaviour
     public float range = 100f;
     public Camera fpscam;
     public ParticleSystem muzzleFlash;
-    
+    public AudioClip gunshot;
+    AudioSource audioSource;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -36,7 +38,8 @@ public class gun : MonoBehaviour
         if(GameManager.ammoleft>0)
         {
             if (Input.GetButtonDown("Fire1"))
-            {   
+            {
+                audioSource.PlayOneShot(gunshot, 0.7F);
                 //deduct ammo by 2
                 GameManager.ammoleft -= 2;
                 Shoot();
