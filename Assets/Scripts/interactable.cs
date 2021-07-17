@@ -8,7 +8,8 @@ public enum Epickuptype
     ept_health,
     ept_ammo,
     ept_key,
-    ept_coin
+    ept_coin,
+    ept_gun
     
 }
 public class interactable : MonoBehaviour

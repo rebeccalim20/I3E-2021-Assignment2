@@ -51,7 +51,7 @@ public class gun : MonoBehaviour
         RaycastHit hit;
         if (Physics.Raycast(fpscam.transform.position,fpscam.transform.forward,out hit ,range))
         {
-            Debug.Log(hit.transform.name);
+            /*Debug.Log(hit.transform.name);*/
             enemyhealth target = hit.transform.GetComponent<enemyhealth>();
             if(target !=null)
             {

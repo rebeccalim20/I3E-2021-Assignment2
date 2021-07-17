@@ -70,7 +70,6 @@ public class SamplePlayer : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        Debug.Log("playerhitenemy");
         if (collision.gameObject.tag == "enemy")
         {
             gotHurt();
@@ -137,22 +136,35 @@ public class SamplePlayer : MonoBehaviour
             sensedobject = null;
         }
 
-        if (Input.GetMouseButton(0) && sensedobject)
+        if (Input.GetKey(KeyCode.E) && sensedobject)
         {
 
             Debug.LogFormat("Used :{0} of type {1} amount :{2}", sensedobject.name, sensedobject.pickuptype, sensedobject.amount);
             //apply amount of the amount of the part by destroy/consume the object 
             if (sensedobject.name == "coins")
             {
-                Debug.Log("coinsyay");
                 GameManager.coincollect += sensedobject.amount;
 
             }
-            if (sensedobject.name == "ammo")
+            if (sensedobject.name == "ammopickup")
             {
-                Debug.Log("amoosds");
-                GameManager.ammoleft += sensedobject.amount;
+              GameManager.ammoleft += sensedobject.amount;
             }
+            if (sensedobject.name == "key")
+            {
+                
+                GameManager.key += sensedobject.amount;
+            }
+            if (sensedobject.name == "healthpickup")
+            {
+
+                GameManager.playerhealth += sensedobject.amount;
+            }
+            if (sensedobject.name =="gun")
+            {
+                GameManager.pistol.SetActive(true);
+            }
+
             Destroy(sensedobject.gameObject);
         }
 

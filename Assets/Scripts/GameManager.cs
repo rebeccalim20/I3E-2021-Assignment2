@@ -24,9 +24,14 @@ public class GameManager : MonoBehaviour
     public Text Ammotxt;
     
     //playerhealth
-    public static int playerhealth =100;
+    public static float playerhealth =100;
     public static float coincollect=0;
     public static float ammoleft = 20;
+    public static float key = 0;
+
+
+    public static int countenemy;
+    public static GameObject pistol;
 
     /// <summary>
     /// Quest text ui update
@@ -44,22 +49,55 @@ public class GameManager : MonoBehaviour
         playerhealth = 100;
         coincollect = 0;
         ammoleft = 20;
+        key = 0;
         playerHealthtxt = GameObject.Find("playerHealthtxt").GetComponent<Text>();
+        pistol = GameObject.Find("/Player/Main Camera/pistol"); ;
+        pistol.SetActive(false);
+
+        quest1.text = " Quest 1 : collect  the  coins";
+        quest2.text = " Quest 2 : collect key ";
+        quest3.text = " Quest 3: Pickup gun";
+        quest4.text = " Quest 4: Kill the zombies ";
+        quest5.text = " Quest 5 :kill the boss";
+
     }
 
     // Update is called once per frame
     void Update()
     {
+        //update health and some pickups for the ui 
+
         playerHealthtxt.text = " Health:" +playerhealth;
         Cointxt.text = " Coins:" + coincollect;
         Ammotxt.text = " Ammo left :" + ammoleft;
         playerdeath();
-        if(coincollect >=50)
+
+        if (ammoleft <= 0)
+        {
+            ammoleft = 0;
+        }
+        //check if the coin is greater than 50 
+
+        if (coincollect >=50)
         {
             quest1.text = " Quest 1 : collect  the  coins ( complete)" ;
         }
+        if (key >= 1)
+        {
+            quest2.text = " Quest 2 : collect key  ( complete)";
+            
+        }
+        //check if the pistol is set active 
 
-      
+        if(pistol.activeInHierarchy ==true)
+        {
+            quest3.text = " Quest 3: Pickup gun (complete)";
+        }
+        Debug.Log(countenemy);
+        if(countenemy >=60)
+        {
+            quest4.text = " Quest 4: Kill the zombies (complete) ";
+        }
 
     }
 

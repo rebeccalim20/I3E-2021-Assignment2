@@ -36,6 +36,7 @@ public class enemyhealth : MonoBehaviour
         enemyhealthtxt.GetComponent<TextMeshPro>().text = enemyhealthpt.ToString();
         if (enemyhealthpt <=0f)
         {
+            GameManager.countenemy += 20;
             die();
         }
 
