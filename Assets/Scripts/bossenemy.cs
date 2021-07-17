@@ -11,13 +11,13 @@ public class bossenemy : MonoBehaviour
     NavMeshAgent agent;
     Animator anim;
 
-    public float bosshealthpt = 100f;
+    public float bosshealthpt = 300f;
     
 
     // Start is called before the first frame update
     void Start()
     {
-        bosshealthpt = 100f;
+        bosshealthpt = 300f;
         target = GameObject.FindGameObjectWithTag("Player").transform;
         agent = GetComponent<NavMeshAgent>();
         anim = GetComponent<Animator>();

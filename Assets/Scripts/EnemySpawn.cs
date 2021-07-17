@@ -21,7 +21,7 @@ public class EnemySpawn : MonoBehaviour
 
 
 
-    [SerializeField] float repeatRate=0.1f;
+    [SerializeField] float repeatRate;
    
 
     private void Start()
