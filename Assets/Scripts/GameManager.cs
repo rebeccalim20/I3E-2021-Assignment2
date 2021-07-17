@@ -113,7 +113,7 @@ public class GameManager : MonoBehaviour
             quest3.text = " Quest 3: Pickup gun (complete)";
         }
 
-        Debug.Log(countenemy);
+       /* Debug.Log(countenemy);*/
         
         //count the enemy points
         if(countenemy >=60)

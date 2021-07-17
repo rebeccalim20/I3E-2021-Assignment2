@@ -49,7 +49,10 @@ public class SamplePlayer : MonoBehaviour
     public interactable sensedobject = null;
     public Camera fpscamera = null;
 
-
+    public Transform FirstTarget;
+    public Transform SecondTarget;
+    public Transform ThirdTarget;
+    public Transform FourthTarget;
     public GameObject m_GotHitScreen;
 
 
@@ -144,28 +147,48 @@ public class SamplePlayer : MonoBehaviour
             if (sensedobject.name == "coins")
             {
                 GameManager.coincollect += sensedobject.amount;
+                Destroy(sensedobject.gameObject);
 
             }
             if (sensedobject.name == "ammopickup")
             {
               GameManager.ammoleft += sensedobject.amount;
+              Destroy(sensedobject.gameObject);
             }
             if (sensedobject.name == "key")
             {
                 
                 GameManager.key += sensedobject.amount;
+                Destroy(sensedobject.gameObject);
             }
             if (sensedobject.name == "healthpickup")
             {
 
                 GameManager.playerhealth += sensedobject.amount;
+                Destroy(sensedobject.gameObject);
+            }
+
+            if(sensedobject.name =="teleportpad")
+            {
+               
+                this.transform.position = SecondTarget.transform.position;
+            }
+            if (sensedobject.name == "teleportpad3")
+            {
+                
+                this.transform.position = FourthTarget.transform.position;
+            }
+            if (sensedobject.name == "teleportpad4")
+            {
+                Debug.Log("yayasdasdsd");
+                this.transform.position = FirstTarget.transform.position;
             }
             if (sensedobject.name =="gun")
             {
                 GameManager.pistol.SetActive(true);
             }
 
-            Destroy(sensedobject.gameObject);
+            
         }
 
     }

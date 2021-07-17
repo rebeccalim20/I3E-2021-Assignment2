@@ -27,7 +27,7 @@ public class bossenemy : MonoBehaviour
     void Update()
     {
         
-        Debug.Log(bosshealthpt);
+        /*Debug.Log(bosshealthpt);*/
         float distance = Vector3.Distance(transform.position, target.position);
 
         if (distance > 1.5)
