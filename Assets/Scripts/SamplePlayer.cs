@@ -55,19 +55,22 @@ public class SamplePlayer : MonoBehaviour
     public Transform FourthTarget;
     public GameObject m_GotHitScreen;
 
-
+    public GameObject loadingscreen;
 
 
 
     // Start is called before the first frame update
     void Start()
     {
+
+        nextState = "Idle";
+
         if (lockCursor)
         {
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = true;
         }
-        nextState = "Idle";
+        
 
      }
 
@@ -90,6 +93,8 @@ public class SamplePlayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+       
+
         if (nextState != currentState)
         {
             SwitchState();
@@ -113,7 +118,6 @@ public class SamplePlayer : MonoBehaviour
 
     void detectpickupobject()
     {
-
         //world postion of where the mouse curosr is pointing at where we are looking towards to 
         Ray ray = fpscamera.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
@@ -170,18 +174,19 @@ public class SamplePlayer : MonoBehaviour
 
             if(sensedobject.name =="teleportpad")
             {
-               
-                this.transform.position = SecondTarget.transform.position;
+                loadingscreen.SetActive( true);
+                Invoke("teleport1", 2f);
             }
             if (sensedobject.name == "teleportpad3")
             {
-                
-                this.transform.position = FourthTarget.transform.position;
+                loadingscreen.SetActive(true);
+                Invoke("teleport3", 2f);
             }
             if (sensedobject.name == "teleportpad4")
             {
-                Debug.Log("yayasdasdsd");
-                this.transform.position = FirstTarget.transform.position;
+                loadingscreen.SetActive(true);
+                Invoke("teleport4", 2f);
+                
             }
             if (sensedobject.name =="gun")
             {
@@ -192,6 +197,30 @@ public class SamplePlayer : MonoBehaviour
         }
 
     }
+
+
+    //teleporting class
+    void teleport1()
+    {
+        loadingscreen.SetActive(false);
+        this.transform.position = SecondTarget.transform.position;
+    }
+
+    void teleport3()
+    {
+        loadingscreen.SetActive(false);
+        this.transform.position = FourthTarget.transform.position;
+    }
+    void teleport4()
+    {
+        loadingscreen.SetActive(false);
+        this.transform.position = FirstTarget.transform.position;
+    }
+
+
+
+
+
 
     /// <summary>
     /// Sets the current state of the player
