@@ -504,7 +504,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -260.1, y: -36.9}
+  m_AnchoredPosition: {x: -260.1, y: -110.5}
   m_SizeDelta: {x: 168, y: 35.9577}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &151272298
@@ -527,7 +527,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Control Keys: W(Front) ,A(Left) ,S(Right) ,D(Back)'
+  m_text: "Control Keys: W(Front) ,A(Left) ,S(Right) ,D(Back)\n\n- Press E to interact
+    and pickup the items such as health, ammo  gun and to teleport\r\n- Press left
+    mouse button to attack the enemy\r\n- Player need to pickups gun else can't attack
+    the zombie  \r\n- Player can't shoot when the ammo is less than zero\r\n- Player
+    will win after defeating zombies and boss and survive till the end.\n\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
