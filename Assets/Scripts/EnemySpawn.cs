@@ -1,3 +1,13 @@
+/******************************************************************************
+Author: 
+
+Name of Class: EnemySpawn
+
+Description of Class: Randomly spawn enemies (Zombies)
+
+Date Created: 15/07/2021
+
+******************************************************************************/
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
