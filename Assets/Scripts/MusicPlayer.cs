@@ -1,3 +1,14 @@
+/******************************************************************************
+Author: 
+
+Name of Class: MusicPlayer
+
+Description of Class: Play Background music and adjusting the volume on the option menu.
+
+Date Created: 15/07/2021
+
+******************************************************************************/
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
