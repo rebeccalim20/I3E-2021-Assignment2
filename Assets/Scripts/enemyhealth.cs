@@ -33,7 +33,7 @@ public class enemyhealth : MonoBehaviour
     public void takedamange(float amount )
     {
         enemyhealthpt -= amount;
-        enemyhealthtxt.GetComponent<TextMeshPro>().text = enemyhealthpt.ToString();
+        enemyhealthtxt.GetComponent<TextMeshPro>().text =enemyhealthpt.ToString();
         if (enemyhealthpt <=0f)
         {
             GameManager.countenemy += 20;

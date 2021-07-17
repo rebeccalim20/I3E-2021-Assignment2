@@ -31,28 +31,35 @@ public class gun : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //check if the ammo is greater than  0
+
         if(GameManager.ammoleft>0)
         {
-
-        if (Input.GetButtonDown("Fire1"))
-        {
-            GameManager.ammoleft -= 2;
-            Shoot();
-        }
+            if (Input.GetButtonDown("Fire1"))
+            {   
+                //deduct ammo by 2
+                GameManager.ammoleft -= 2;
+                Shoot();
+            }
 
         }
     }
 
     void Shoot()
     {
+        //play particle systems
         muzzleFlash.Play();
 
 
         RaycastHit hit;
+        
+
         if (Physics.Raycast(fpscam.transform.position,fpscam.transform.forward,out hit ,range))
         {
-            /*Debug.Log(hit.transform.name);*/
+            
             enemyhealth target = hit.transform.GetComponent<enemyhealth>();
+            
+            //check if the target is not null
             if(target !=null)
             {
                 target.takedamange(damage);

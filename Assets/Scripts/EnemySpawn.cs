@@ -14,6 +14,7 @@ using UnityEngine;
 
 public class EnemySpawn : MonoBehaviour
 {
+
     public GameObject enemyToSpawn;
     public Transform[] spawnPoints;
     BoxCollider trigger;
@@ -25,11 +26,13 @@ public class EnemySpawn : MonoBehaviour
 
     private void Start()
     {
+        //trigger and get component of box collider
         trigger = GetComponent<BoxCollider>();
     }
 
     private void OnTriggerEnter(Collider other)
     {
+        //if collision is tag player spawn enemies 
         if (other.tag == "Player")
         {
             InvokeRepeating("SpawnEnemies", 0.5f, repeatRate);
@@ -42,6 +45,7 @@ public class EnemySpawn : MonoBehaviour
 
     void SpawnEnemies()
     {
+        // spawn enemy in the spawnpoints in its position and rotation
         foreach (var sp in spawnPoints)
         {
             Instantiate(enemyToSpawn, sp.position, sp.rotation);

@@ -33,9 +33,8 @@ public class menu : MonoBehaviour
         SceneManager.LoadScene("menu");
     }
 
-    //Load level1
+    //Load gamescene
     
-    //Load level2
     public void gamescene(string gamescene)
     {
         SceneManager.LoadScene("gamescene");
