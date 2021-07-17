@@ -364,7 +364,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &81549427
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2141,7 +2141,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &994456957
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3123,7 +3123,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -263.1, y: -113.6}
+  m_AnchoredPosition: {x: -237.9, y: -116.7}
   m_SizeDelta: {x: 168, y: 35.9577}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1690230189
@@ -3146,11 +3146,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Raycast shooting - https://youtu.be/THnivyG0Mvo\r\n\r\nAssets from Unity
-    Asset Store:\r\n\r\nhttps://assetstore.unity.com/packages/3d/environments/industrial/rpg-fps-game-assets-for-pc-mobile-industrial-set-v2-0-86679\r\n\nGun
-    Prefab:\r                   Done by Rebecca lim\r\n\nGame Music:\r\n\rSmoking
-    Gun by Kevin MacLeod Link: https://filmmusic.io/song/4378-smoking-gun License:
-    https://filmmusic.io/standard-license"
+  m_text: "Raycast collectible : - https://youtu.be/84A3xLDWfXc\r\n\r\nRaycast shooting
+    - https://youtu.be/THnivyG0Mvo\r\n\r\r\nEnvironment Assets from Unity Asset Store:\r\nhttps://assetstore.unity.com/packages/3d/environments/industrial/rpg-fps-game-assets-for-pc-mobile-industrial-set-v2-0-86679\r\n\r\nGun
+    Prefab /pickups(health , ammo , coin ,key ,teleport) /Ui design:\r\nDone by Rebecca
+    Lim and Lindsay Yeo\r\n\r\nGame Music:\r\nSmoking Gun by Kevin MacLeod Link:
+    https://filmmusic.io/song/4378-smoking-gun \r\nLicense: https://filmmusic.io/standard-license\r\n\r\nText
+    from:\r\nhttps://www.dafont.com/\r\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3177,8 +3178,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 15
-  m_fontSizeBase: 15
+  m_fontSize: 14
+  m_fontSizeBase: 14
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
