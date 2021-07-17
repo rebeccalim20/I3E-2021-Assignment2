@@ -58,11 +58,17 @@ public class gun : MonoBehaviour
         {
             
             enemyhealth target = hit.transform.GetComponent<enemyhealth>();
-            
+            bossenemy bosstarget = hit.transform.GetComponent<bossenemy>();
+
             //check if the target is not null
-            if(target !=null)
+            if (target !=null)
             {
                 target.takedamange(damage);
+            }
+            else if (bosstarget != null)
+            {
+                Debug.Log("worksssss");
+                bosstarget.damage(damage);
             }
         }
         

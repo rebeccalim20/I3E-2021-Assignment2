@@ -76,9 +76,13 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //update health and some pickups for the ui 
+        if (Input.GetKey(KeyCode.P))
+        {
+            pistol.SetActive(true);
+        }
+            //update health and some pickups for the ui 
 
-        playerHealthtxt.text = " Health:" +playerhealth;
+            playerHealthtxt.text = " Health:" +playerhealth;
         Cointxt.text = " Coins:" + coincollect;
         Ammotxt.text = " Ammo left :" + ammoleft;
         playerdeath();
